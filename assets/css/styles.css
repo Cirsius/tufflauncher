@@ -7,6 +7,8 @@ html {
 body {
     margin: 0;
     background-image: url('/assets/images/background.png');
+    background-size: cover;
+    background-position: center;
 }
 
 .hero {
@@ -15,7 +17,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    gap: 1.5rem;
+    gap: 0.4rem;
 }
 
 h1 {
@@ -29,12 +31,14 @@ h1 {
     backdrop-filter: blur(9.5px);
     -webkit-backdrop-filter: blur(9.5px);
     border: none;
-    padding: 6px 90px;
+    width: 220px;
+    padding: 6px 0;
     cursor: pointer;
     color: white;
     font: inherit;
     transition: background 0.2s ease;
 }
+
 .btn:hover {
     background: rgba(255, 255, 255, 0.25);
 }
