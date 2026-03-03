@@ -1,4 +1,6 @@
 mod button;
+mod modal;
+
 use button::TuffButton;
 
 fn main() {
