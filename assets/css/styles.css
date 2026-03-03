@@ -42,3 +42,80 @@ h1 {
 .btn:hover {
     background: rgba(255, 255, 255, 0.25);
 }
+
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: backdrop-in 0.25s ease forwards;
+}
+
+.modal {
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(9.5px);
+    -webkit-backdrop-filter: blur(9.5px);
+    border-radius: 10px;
+    padding: 2rem;
+    color: white;
+    min-width: 300px;
+    animation: modal-in 0.25s ease forwards;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2rem;
+    float: right;
+    padding: 0;
+    line-height: 1;
+}
+
+@keyframes backdrop-in {
+    from { background: rgba(0, 0, 0, 0); }
+    to   { background: rgba(0, 0, 0, 0.4); }
+}
+
+@keyframes modal-in {
+    from {
+        opacity: 0;
+        transform: scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.modal-backdrop.closing {
+    animation: backdrop-out 0.25s ease forwards;
+}
+
+.modal.closing {
+    animation: modal-out 0.25s ease forwards;
+}
+
+@keyframes backdrop-out {
+    from { background: rgba(0, 0, 0, 0.4); }
+    to   { background: rgba(0, 0, 0, 0); }
+}
+
+@keyframes modal-out {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.96);
+    }
+}
+
+a.btn {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    box-sizing: border-box;
+}
